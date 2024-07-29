@@ -1,4 +1,4 @@
-package com.cubrid.validator;
+package org.cubrid.validator;
 
 public class SQLValidator {
 

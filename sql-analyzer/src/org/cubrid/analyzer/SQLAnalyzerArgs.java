@@ -1,4 +1,4 @@
-package com.cubrid.analyzer;
+package org.cubrid.analyzer;
 
 import com.beust.jcommander.Parameter;
 

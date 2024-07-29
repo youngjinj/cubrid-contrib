@@ -2,9 +2,34 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>youngjinj</groupId>
+
+	<name>SQL Analyzer</name>
+	<groupId>org.cubrid</groupId>
 	<artifactId>sql-analyzer</artifactId>
-	<version>2024.07.29</version>
+	<version>1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<organization>
+		<name>CUBRID</name>
+		<url>https://www.cubrid.org</url>
+	</organization>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>youngjinj</id>
+			<name>Youngjin Joo</name>
+			<email>youngjinj@cubrid.com</email>
+			<organization>CUBRID</organization>
+		</developer>
+	</developers>
 
 	<repositories>
 		<repository>
@@ -14,6 +39,13 @@
 	</repositories>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+		<dependency>
+			<groupId>com.beust</groupId>
+			<artifactId>jcommander</artifactId>
+			<version>1.82</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -21,23 +53,19 @@
 			<version>3.5.11</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
-		<dependency>
-			<groupId>com.beust</groupId>
-			<artifactId>jcommander</artifactId>
-			<version>1.82</version>
-		</dependency>
-	
 		<!-- https://mvnrepository.com/artifact/cubrid/cubrid-jdbc -->
 		<dependency>
 			<groupId>cubrid</groupId>
 			<artifactId>cubrid-jdbc</artifactId>
-			<version>11.1.0.0027</version>
+			<version>11.2.1.0038</version>
 		</dependency>
 	</dependencies>
 
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		<defaultGoal>install</defaultGoal>
+
+		<sourceDirectory>${project.basedir}/src</sourceDirectory>
+
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -47,12 +75,13 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.cubrid.analyzer.SQLAnalyzer</mainClass>
+							<mainClass>org.cubrid.analyzer.SQLAnalyzer</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>

@@ -1,4 +1,4 @@
-package com.cubrid.parser;
+package org.cubrid.parser;
 
 public class SqlMapTag {
 	private String name = null;

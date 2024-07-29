@@ -1,4 +1,4 @@
-package com.cubrid.database;
+package org.cubrid.database;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import com.cubrid.validator.SQLValidator;
+import org.cubrid.validator.SQLValidator;
 
 public class DatabaseManager {
 	private final String NO_ERROR = "NO_ERROR";

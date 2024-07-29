@@ -1,4 +1,4 @@
-package com.cubrid.analyzer;
+package org.cubrid.analyzer;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -6,9 +6,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 
+import org.cubrid.database.DatabaseManager;
+import org.cubrid.parser.SqlMapParser;
+
 import com.beust.jcommander.JCommander;
-import com.cubrid.database.DatabaseManager;
-import com.cubrid.parser.SqlMapParser;
 
 public class SQLAnalyzer {
 	private final String SUMMARY_FILE_NAME = "summary.log";

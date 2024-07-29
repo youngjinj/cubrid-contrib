@@ -1,4 +1,4 @@
-package com.cubrid.parser;
+package org.cubrid.parser;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -9,13 +9,12 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.cubrid.analyzer.SQLAnalyzer;
+import org.cubrid.database.DatabaseManager;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.ext.DefaultHandler2;
 import org.xml.sax.ext.LexicalHandler;
-
-import com.cubrid.analyzer.SQLAnalyzer;
-import com.cubrid.database.DatabaseManager;
 
 import ognl.OgnlHelper;
 
