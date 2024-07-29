@@ -7,31 +7,37 @@
 
 ### sql-analyzer
 
+/sql-analyzer/sqlmap
+/sql-analyzer/summary.log
+
 
 ## Eclipse
 
+/sql-analyzer/.settings
+/sql-analyzer/bin
+
 # CDT-specific (C/C++ Development Tooling)
-/sql-analyzer/*/.cproject
+/sql-analyzer/.cproject
 
 
 ## Maven
 
-/sql-analyzer/*/target/
+/sql-analyzer/target/
 
 
 ## Eclipse m2e generated files
 
 # Eclipse Core
-/sql-analyzer/*/.project
+/sql-analyzer/.project
 
 # JDT-specific (Eclipse Java Development Tools)
-/sql-analyzer/*/.classpath
+/sql-analyzer/.classpath
 
 
 ## C/C++
 
 # Compiled Object files
-/sql-analyzer/*/*.o
+/sql-analyzer/jni/*.o
 
 # Compiled Dynamic libraries
-/sql-analyzer/*/*.dll
+/sql-analyzer/jni/*.dll
