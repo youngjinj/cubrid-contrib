@@ -7,7 +7,7 @@
 	<groupId>org.cubrid</groupId>
 	<artifactId>sql-analyzer</artifactId>
 	<version>1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
 	<organization>
 		<name>CUBRID</name>
@@ -64,7 +64,7 @@
 	<build>
 		<defaultGoal>install</defaultGoal>
 
-		<sourceDirectory>${project.basedir}/src</sourceDirectory>
+		<sourceDirectory>src</sourceDirectory>
 
 		<plugins>
 			<plugin>
