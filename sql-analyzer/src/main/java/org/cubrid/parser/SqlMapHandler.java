@@ -72,7 +72,7 @@ public class SqlMapHandler extends DefaultHandler2 implements LexicalHandler {
 
 	private OgnlHelper ognlHelper = null;
 	private Map<String, Object> parameterMap = null;
-	
+
 	private Map<String, String> mapDocType = null;
 	private Map<String, String> mapIsEmpty = null;
 	private Map<String, String> mapIsEqual = null;
@@ -282,8 +282,7 @@ public class SqlMapHandler extends DefaultHandler2 implements LexicalHandler {
 			}
 			/* debug */
 			StringBuilder ognlHelperErrorBuffer = ognlHelper.getErrorBuffer();
-			if (ognlHelperErrorBuffer.length() != 0)
-			{
+			if (ognlHelperErrorBuffer.length() != 0) {
 				StringBuilder errorBuffer = databaseManager.getErrorBuffer();
 				if (errorBuffer.length() == 0) {
 					errorBuffer
@@ -296,7 +295,7 @@ public class SqlMapHandler extends DefaultHandler2 implements LexicalHandler {
 				errorBuffer.append(ognlHelperErrorBuffer.toString());
 				errorBuffer.append(System.getProperty("line.separator"));
 				errorBuffer.append("--------------------------------------------------------------------------------");
-				
+
 				ognlHelper.resetErrorBuffer();
 			}
 			/**/
@@ -554,7 +553,7 @@ public class SqlMapHandler extends DefaultHandler2 implements LexicalHandler {
 					beforeTag.addContents(" " + pttrnMtchSQL(currentTag.getContents()) + " ");
 				}
 				break;
-				
+
 			default:
 				break;
 			}
@@ -623,7 +622,7 @@ public class SqlMapHandler extends DefaultHandler2 implements LexicalHandler {
 		if (attributes.getValue("test") != null) {
 			tag.setTest(attributes.getValue("test"));
 		}
-		
+
 		stackReadTag.push(tag);
 	}
 

@@ -1,14 +1,18 @@
 package org.cubrid.analyzer;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class SQLAnalyzerTest {
 
 	@Test
-	public void test() {
+	public void validatorTest() {
 		SQLAnalyzer sqlAnalyzer = new SQLAnalyzer(true);
+		sqlAnalyzer.start();
+	}
+
+	@Test
+	public void analyzerTest() {
+		SQLAnalyzer sqlAnalyzer = new SQLAnalyzer(false);
 		sqlAnalyzer.start();
 	}
 

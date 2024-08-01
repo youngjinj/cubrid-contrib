@@ -2,10 +2,8 @@ package org.cubrid.analyzer;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Reader;
 import java.net.URI;
 
 import org.cubrid.database.DatabaseManager;
@@ -266,8 +264,10 @@ public class SQLAnalyzer {
 
 	public void start() {
 		openSummary();
-		
-		traverseDirectory(new File(getClass().getClassLoader().getResource(SQLMAP_PATH).getFile()));
+
+		File fileOrDir = new File(SQLMAP_PATH);
+
+		traverseDirectory(fileOrDir);
 
 		if (isBeforeFile == true) {
 			appendSubTotalSummary();
@@ -295,7 +295,7 @@ public class SQLAnalyzer {
 					parse(file);
 
 					appendQuerySummary(rootPath.relativize(file.toURI()).toString());
-					
+
 					/*-
 					 * debug
 					 *

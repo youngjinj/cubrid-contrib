@@ -18,7 +18,7 @@
 #define NO_ERROR   0
 #define ER_FAILED -1
 
-#define DEFAULT_LIBRARY_PATH "C:\\CUBRID\\bin\\cubridcs.dll"
+#define DEFAULT_LIBRARY_PATH "C:/CUBRID/bin/cubridcs.dll"
 #define DEFAULT_LANG_CHARSET "ko_KR.utf8"
 #define DEFAULT_BUF_LENGTH   1024
 
@@ -204,7 +204,7 @@ static int load(HINSTANCE hDLL, const char * libraryPath) {
 
 	hDLL = LoadLibrary(libraryPath);
 	if (hDLL == NULL) {
-		fprintf(stderr, "Failed to LoadLibrary().\n");
+		fprintf(stderr, "Failed to LoadLibrary( %s ).\n", libraryPath);
 		return ER_FAILED;
 	}
 
