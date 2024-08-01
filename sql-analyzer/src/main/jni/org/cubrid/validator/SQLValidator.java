@@ -5,7 +5,7 @@ public class SQLValidator {
 	static {
 		try {
 			/* -Djava.library.path=jni */
-			System.loadLibrary("sqlvalidator");
+			System.loadLibrary("build/sqlvalidator");
 		} catch (UnsatisfiedLinkError e) {
 			e.printStackTrace();
 		}

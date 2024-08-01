@@ -49,7 +49,7 @@ public class DatabaseManager {
 		Properties prop = new Properties();
 
 		try {
-			Reader reader = new FileReader("db.properties");
+			Reader reader = new FileReader(getClass().getClassLoader().getResource("db.properties").getFile());
 			prop.load(reader);
 		} catch (IOException e) {
 			System.err.println(e.getMessage());
